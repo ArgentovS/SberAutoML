@@ -6,6 +6,8 @@ import matplotlib.pylab as plt
 from matplotlib.ticker import FormatStrFormatter
 import numpy as np
 from scipy import stats
+import multiprocessing
+from multiprocessing import Pool, Manager
 
 
 ### Функция загрузки датасета
