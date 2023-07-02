@@ -47,7 +47,7 @@ def dataset_preparation(df):
     if 'visit_date' in df.columns:
         # Список удаляемых колонок
         # (в колонках более 40% пропущенных данных)
-        columns_columns_delete = ['utm_keyword', 'device_os', 'device_model']
+        columns_columns_delete = ['device_model']#['utm_keyword', 'device_os', 'device_model']
 
         # Список колонок, в которых проверется наличие пропусков для удаления строк
         # (в колонках менее 1% пропущенных данных)
@@ -56,25 +56,6 @@ def dataset_preparation(df):
         # Список колонок, в которых меняются пропуски на наиболее часто встречающиеся значения
         # (в колонках более 1% и менее 40% пропущенных данных)
         columns_value_top = ['utm_campaign', 'utm_adcontent', 'device_brand']
-
-        # Список колонок, в которых меняются пропуски на наиболее часто встречающиеся значения
-        # при этом одновременно учитываются корреляциии атрибута с другим атрибутом
-        # (в колонках более 1% и менее 40% пропущенных данных)
-        # columns_value_top_correlation = [('geo_country', 'geo_city')]
-
-    #     else:
-    #         # Список удаляемых колонок
-    #         # (в колонках более 40% пропущенных данных)
-    #         columns_columns_delete = ['hit_referer', 'event_value']
-
-    #         # Список колонок, в которых проверется наличие пропусков для удаления строк
-    #         # (в колонках менее 1% пропущенных данных)
-    #         columns_rows_delete = ['hit_number', 'hit_type', 'hit_page_path',\
-    #                        'event_category', 'event_action']
-
-    #         # Список колонок, в которых меняются пропуски на наиболее часто встречающиеся значения
-    #         # (в колонках более 1% и менее 40% пропущенных данных)
-    #         columns_value_top = ['device_brand', 'event_label']
 
     # Удаляем пропуски в датасете
 
@@ -203,7 +184,7 @@ def clean_columns_rows(df, col_col_df, col_row_df, col_cell_val_top):
 
     """
 
-    print('... удаляем колонки, в которых более 40% пропущенных данных ...')
+    print('... удаляем колонки, в которых более 90% пропущенных данных ...')
     df = df.drop(columns=col_col_df, axis=1)  # Удаление колонки 'hit_time'
     print('После удаления заданных колонок - размер датасета:', df.shape)
 
