@@ -11,6 +11,7 @@
 Данные для анализа сайта представлены командой аналитики „СберАвтоподписки“.  
 Эти данные можно найти по [ссылке](https://drive.google.com/drive/folders/1rA4o6KHH-M2KMvBLHp5DZ5gioF2q7hZw).
 Промежуточное хранилище данных можно найти по [ссылке](https://disk.yandex.ru/d/4iA-TBnX4Zv_uw).
+Упакованную в pickle-формат модель можно найти по [ссылке](https://disk.yandex.ru/d/izx8r76LCPbMRQ).
 
 
 Для просмотра исследования можно открыть файл SberAutoML.ipynb непосредственно в GitHub.
